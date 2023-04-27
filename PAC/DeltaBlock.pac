@@ -42,10 +42,6 @@ function FindProxyForURL(url, host) {
     "metrics.apple.com",
     "metrics.mzstatic.com",
     "samsung-com.112.2o7.net",
-
-    // Addon: Anti Revoke
-    "ocsp.apple.com", 
-    "ocsp2.apple.com",
   ];
   var regexps = [
     "*doubleclick*",

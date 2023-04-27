@@ -11,19 +11,19 @@
 			<key>PayloadType</key>
 			<string>com.apple.proxy.http.global</string>
 			<key>PayloadUUID</key>
-			<string>5C56BE04-E49D-11ED-B5EA-0242AC120002</string>
+			<string>912FAC56-E49F-11ED-B5EA-0242AC120002</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProxyCaptiveLoginAllowed</key>
 			<true/>
 			<key>ProxyPACURL</key>
-			<string>http://cdn.jsdelivr.net/gh/DeltAndy123/DeltaBlock@main/PAC/DeltaBlock+AntiRevoke.pac</string>
+			<string>http://cdn.jsdelivr.net/gh/DeltAndy123/DeltaBlock@main/PAC/DeltaBlock.pac</string>
 			<key>ProxyType</key>
 			<string>Auto</string>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Automatically updating systemwide adblocker (Addons: Anti Revoke)</string>
+	<string>Automatically updating systemwide adblocker</string>
 	<key>PayloadDisplayName</key>
 	<string>DeltaBlock</string>
 	<key>PayloadIdentifier</key>
@@ -37,7 +37,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>A3C95714-E49E-11ED-B5EA-0242AC120002</string>
+	<string>9E5EE504-E49F-11ED-B5EA-0242AC120002</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
