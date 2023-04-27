@@ -76,7 +76,7 @@ function FindProxyForURL(url, host) {
   ]
   for (var i = 0; i < bypassRegexps.length; i++) {
     if (shExpMatch(u, bypassRegexps[i])) {
-      return BYPASS;
+      return ALLOW;
     }
   }
 

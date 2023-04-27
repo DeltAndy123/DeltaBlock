@@ -73,7 +73,7 @@ function FindProxyForURL(url, host) {
     "*googletag*",
   ]
   for (var i = 0; i < bypassRegexps.length; i++) {
-    if (shExpMatch(h, bypassRegexps[i])) {
+    if (shExpMatch(u, bypassRegexps[i])) {
       return BYPASS;
     }
   }
@@ -2453,7 +2453,7 @@ function FindProxyForURL(url, host) {
   ];
   for (var i = 0; i < hosts.length; i++) {
     if (dnsDomainIs(h, hosts[i])) {
-      return BLOCK;
+      return ALLOW;
     }
   }
 
