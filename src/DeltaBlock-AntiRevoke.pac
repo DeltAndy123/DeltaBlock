@@ -44,6 +44,8 @@ function FindProxyForURL(url, host) {
     "samsung-com.112.2o7.net",
     "events.reddit.com",
     "events.redditmedia.com",
+    "adfstat.yandex.ru",
+    "grs.hicloud.com",
 
     // Addon: Anti Revoke
     "ocsp.apple.com", 
