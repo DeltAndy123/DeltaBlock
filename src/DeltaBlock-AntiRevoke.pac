@@ -75,7 +75,7 @@ function FindProxyForURL(url, host) {
     "*googletag*",
   ]
   for (var i = 0; i < bypassRegexps.length; i++) {
-    if (shExpMatch(h, bypassRegexps[i])) {
+    if (shExpMatch(u, bypassRegexps[i])) {
       return BYPASS;
     }
   }
