@@ -4,9 +4,80 @@
 
 const BLOCK = "PROXY 0.0.0.0";
 const ALLOW = "DIRECT";
+const BYPASS = "PROXY 8.8.8.8:53";
 function FindProxyForURL(url, host) {
   const u = url.toLowerCase();
   const h = host.toLowerCase();
+  var bypassRegexps = [
+    "*adblock-tester*",
+    "*adsbe*",
+    "*adsl*",
+    "*adverts.ie*",
+    "*ai.marketing*",
+    "*analytics.twitter*",
+    "*api.ay.gy*",
+    "*api.push.*",
+    "*app.adjust*",
+    "*banner.tw*",
+    "*bannerweb.*",
+    "*beatmarketing*",
+    "*bnbstatic*",
+    "*bostadsbolaget*",
+    "*castrads*",
+    "*cdn-marketing*",
+    "*cdn.jsdelivr*",
+    "*checkadblock*",
+    "*conversions.appsflyer*",
+    "*countervalues.live*",
+    "*cuetracker.net*",
+    "*dead*",
+    "*deembesign.club*",
+    "*gumtree*",
+    "*gungho*",
+    "*heads*",
+    "*hulustream*",
+    "*jsmu.edu*",
+    "*kinja-static*",
+    "*loads*",
+    "*lpsnmedia*",
+    "*marketing.lyft*",
+    "*marketing.zobj*",
+    "*marketingcloud*",
+    "*ms-com*",
+    "*old.reddit.com*",
+    "*promo.api*",
+    "*propellerhealth*",
+    "*reads*",
+    "*roads*",
+    "*rotherhamad*",
+    "*salads*",
+    "*sentry-read*",
+    "*simplex-aff*",
+    "*sponsor.ajay*",
+    "*ssb-banner.humber*",
+    "*starad*",
+    "*swindonad*",
+    "*ulink.adjust*",
+    "*universaltennis*",
+    "*universaltruthschool*",
+    "*unsub*",
+    "*wadsw*",
+    "*washingtonexaminer*",
+    "*yieldwatch*",
+    "*adsafeprotected*",
+    "*app-analytics*",
+    "*app-measurement*",
+    "*applovin*",
+    "*googlead*",
+    "*googlesyndication*",
+    "*googletag*",
+  ]
+  for (var i = 0; i < bypassRegexps.length; i++) {
+    if (shExpMatch(h, bypassRegexps[i])) {
+      return BYPASS;
+    }
+  }
+
   var hosts = [
     "0pixl.com",
     "100widgets.com",
@@ -2380,69 +2451,13 @@ function FindProxyForURL(url, host) {
     "zumcontentdelivery.info",
     "zuphaims.com",
   ];
+  for (var i = 0; i < hosts.length; i++) {
+    if (dnsDomainIs(h, hosts[i])) {
+      return BLOCK;
+    }
+  }
+
   var regexps = [
-    "*adblock-tester*",
-    "*adsbe*",
-    "*adsl*",
-    "*adverts.ie*",
-    "*ai.marketing*",
-    "*analytics.twitter*",
-    "*api.ay.gy*",
-    "*api.push.*",
-    "*app.adjust*",
-    "*banner.tw*",
-    "*bannerweb.*",
-    "*beatmarketing*",
-    "*bnbstatic*",
-    "*bostadsbolaget*",
-    "*castrads*",
-    "*cdn-marketing*",
-    "*cdn.jsdelivr*",
-    "*checkadblock*",
-    "*conversions.appsflyer*",
-    "*countervalues.live*",
-    "*cuetracker.net*",
-    "*dead*",
-    "*deembesign.club*",
-    "*gumtree*",
-    "*gungho*",
-    "*heads*",
-    "*hulustream*",
-    "*jsmu.edu*",
-    "*kinja-static*",
-    "*loads*",
-    "*lpsnmedia*",
-    "*marketing.lyft*",
-    "*marketing.zobj*",
-    "*marketingcloud*",
-    "*ms-com*",
-    "*old.reddit.com*",
-    "*promo.api*",
-    "*propellerhealth*",
-    "*reads*",
-    "*roads*",
-    "*rotherhamad*",
-    "*salads*",
-    "*sentry-read*",
-    "*simplex-aff*",
-    "*sponsor.ajay*",
-    "*ssb-banner.humber*",
-    "*starad*",
-    "*swindonad*",
-    "*ulink.adjust*",
-    "*universaltennis*",
-    "*universaltruthschool*",
-    "*unsub*",
-    "*wadsw*",
-    "*washingtonexaminer*",
-    "*yieldwatch*",
-    "*adsafeprotected*",
-    "*app-analytics*",
-    "*app-measurement*",
-    "*applovin*",
-    "*googlead*",
-    "*googlesyndication*",
-    "*googletag*",
     "*.adcolony.com*",
     "*/banner/*",
     "*1e3af*",
@@ -2790,12 +2805,6 @@ function FindProxyForURL(url, host) {
     "*zffum*",
     "*zyadw*",
   ];
-
-  for (var i = 0; i < hosts.length; i++) {
-    if (dnsDomainIs(h, hosts[i])) {
-      return BLOCK;
-    }
-  }
   for (var i = 0; i < regexps.length; i++) {
     if (shExpMatch(u, regexps[i])) {
       return BLOCK;
