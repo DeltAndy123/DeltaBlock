@@ -2,7 +2,7 @@
 // Personal adblock filterlist using PAC format
 // Last updated: 2023-04-26 EDT
 // Addons:
-// - Anti Revoke Safe: Block enterprise cert revokes (Can stop working, but allows installing enterprise apps)
+// - Anti Revoke Safe: Block enterprise cert revokes (Can stop working, but allows installing new enterprise apps)
 
 const BLOCK = "PROXY 0.0.0.0";
 const ALLOW = "DIRECT";
