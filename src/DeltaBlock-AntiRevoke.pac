@@ -66,13 +66,6 @@ function FindProxyForURL(url, host) {
     "*wadsw*",
     "*washingtonexaminer*",
     "*yieldwatch*",
-    "*adsafeprotected*",
-    "*app-analytics*",
-    "*app-measurement*",
-    "*applovin*",
-    "*googlead*",
-    "*googlesyndication*",
-    "*googletag*",
   ]
   for (var i = 0; i < bypassRegexps.length; i++) {
     if (shExpMatch(u, bypassRegexps[i])) {
@@ -2464,6 +2457,13 @@ function FindProxyForURL(url, host) {
   }
 
   var regexps = [
+    "*adsafeprotected*",
+    "*app-analytics*",
+    "*app-measurement*",
+    "*applovin*",
+    "*googlead*",
+    "*googlesyndication*",
+    "*googletag*",
     "*.adcolony.com*",
     "*/banner/*",
     "*1e3af*",
