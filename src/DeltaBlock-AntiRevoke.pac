@@ -46,6 +46,8 @@ function FindProxyForURL(url, host) {
     "events.redditmedia.com",
     "adfstat.yandex.ru",
     "grs.hicloud.com",
+    "an.yandex.ru",
+    "d2wy8f7a9ursnm.cloudfront.net",
 
     // Addon: Anti Revoke
     "ocsp.apple.com", 
