@@ -1,8 +1,6 @@
 // DeltaBlock
 // Personal adblock filterlist using PAC format
 // Last updated: 2023-04-26
-// Addons:
-// - Anti Revoke
 
 const BLOCK = "PROXY 0.0.0.0";
 const ALLOW = "DIRECT";
@@ -42,10 +40,8 @@ function FindProxyForURL(url, host) {
     "metrics.apple.com",
     "metrics.mzstatic.com",
     "samsung-com.112.2o7.net",
-
-    // Addon: Anti Revoke
-    "ocsp.apple.com", 
-    "ocsp2.apple.com",
+    "events.reddit.com",
+    "events.redditmedia.com",
   ];
   var regexps = [
     "*doubleclick*",
