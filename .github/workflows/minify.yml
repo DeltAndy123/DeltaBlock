@@ -22,9 +22,8 @@ jobs:
 
       - name: Minify files
         run: |
-          cd $GITHUB_WORKSPACE
-          for file in ./src/*.pac; do
-            uglifyjs --comments all ./src/$file > ./PAC/$file
+          for file in $GITHUB_WORKSPACE/src/*.pac; do
+            uglifyjs --comments all $GITHUB_WORKSPACE/src/$file > $GITHUB_WORKSPACE/PAC/$file
           done
 
       - name: Commit changes
