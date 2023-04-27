@@ -1,6 +1,6 @@
 // DeltaBlock
 // Personal adblock filterlist using PAC format
-// Last updated: 2023-04-26
+// Last updated: 2023-04-26 EDT
 
 const BLOCK = "PROXY 0.0.0.0";
 const ALLOW = "DIRECT";
