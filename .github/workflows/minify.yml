@@ -1,0 +1,42 @@
+name: Update Sources
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - '/src/**.pac'
+  workflow_dispatch:
+
+jobs:
+  minify:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+        
+      - name: Install dependencies
+        run: |
+          npm install -g uglify-js
+
+      - name: Minify files
+        run: |
+          for file in ./src/*.pac; do
+            uglifyjs --comments all ./src/$file > ./PAC/$file
+          done
+
+      - name: Commit changes
+        run: |
+          git add .
+          git diff-index --quiet HEAD || (git commit -m "Minify files" && git push)
