@@ -1,4 +1,4 @@
-name: Update Sources
+name: Minify PAC Files
 
 on:
   push:
