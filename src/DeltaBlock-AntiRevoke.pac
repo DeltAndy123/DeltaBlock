@@ -54,6 +54,8 @@ function FindProxyForURL(url, host) {
     "syntaxaboriginalsaxophone.com",
     "addresseepaper.com",
     "unseenreport.com",
+    "firebaselogging.googleapis.com",
+    "barscreative1.com",
 
     // Addon: Anti Revoke
     "ocsp.apple.com", 
