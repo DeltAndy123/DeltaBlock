@@ -1,0 +1,44 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Global HTTP Proxy</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.proxy.http.global.5608408B-C7B0-481B-AC3D-5F53CA96909F</string>
+			<key>PayloadType</key>
+			<string>com.apple.proxy.http.global</string>
+			<key>PayloadUUID</key>
+			<string>C16BE716-D5A1-4F2D-8AC6-8CB0341CD416</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyCaptiveLoginAllowed</key>
+			<true/>
+			<key>ProxyPACURL</key>
+			<string>https://cdn.jsdelivr.net/gh/DeltAndy123/DeltaBlock@main/PAC/DeltaBlock-AntiRevokeFull.pac</string>
+			<key>ProxyType</key>
+			<string>Auto</string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Automatically updating systemwide adblocker (Addons: Anti Revoke Full)</string>
+	<key>PayloadDisplayName</key>
+	<string>DeltaBlock</string>
+	<key>PayloadIdentifier</key>
+	<string>me.deltandy.deltablock</string>
+	<key>PayloadOrganization</key>
+	<string>DeltAndy</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>39B552BA-EA7A-45C7-80AB-07F5BD5C4C3F</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

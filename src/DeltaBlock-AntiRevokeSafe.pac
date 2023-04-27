@@ -2,7 +2,7 @@
 // Personal adblock filterlist using PAC format
 // Last updated: 2023-04-26 EDT
 // Addons:
-// - Anti Revoke
+// - Anti Revoke Safe: Block enterprise cert revokes (Can stop working, but allows installing enterprise apps)
 
 const BLOCK = "PROXY 0.0.0.0";
 const ALLOW = "DIRECT";
@@ -2446,7 +2446,7 @@ function FindProxyForURL(url, host) {
     "zumcontentdelivery.info",
     "zuphaims.com",
 
-    // Addon: Anti Revoke
+    // Addon: Anti Revoke Safe
     "ocsp.apple.com", 
     "ocsp2.apple.com",
   ];

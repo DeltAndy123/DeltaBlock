@@ -17,13 +17,13 @@
 			<key>ProxyCaptiveLoginAllowed</key>
 			<true/>
 			<key>ProxyPACURL</key>
-			<string>https://cdn.jsdelivr.net/gh/DeltAndy123/DeltaBlock@main/PAC/DeltaBlock-AntiRevoke.pac</string>
+			<string>https://raw.githubusercontent.com/DeltAndy123/DeltaBlock/main/PAC/DeltaBlock-AntiRevokeSafe.pac</string>
 			<key>ProxyType</key>
 			<string>Auto</string>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Automatically updating systemwide adblocker (Addons: Anti Revoke)</string>
+	<string>Automatically updating systemwide adblocker (Addons: Anti Revoke Safe)</string>
 	<key>PayloadDisplayName</key>
 	<string>DeltaBlock</string>
 	<key>PayloadIdentifier</key>
