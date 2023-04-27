@@ -13,10 +13,6 @@ function FindProxyForURL(url, host) {
     "adtago.s3.amazonaws.com",
     "analyticsengine.s3.amazonaws.com",
     "analytics.s3.amazonaws.com",
-    "advice-ads.s3.amazonaws.com",
-    "advertising-api-eu.amazon.com",
-    "adservice.google.com",
-    "pagead2.googleadservices.com",
     "freshmarketer.com",
     "stats.wp.com",
     "pixel.facebook.com",
@@ -48,6 +44,16 @@ function FindProxyForURL(url, host) {
     "grs.hicloud.com",
     "an.yandex.ru",
     "d2wy8f7a9ursnm.cloudfront.net",
+    "highcpmrevenuenetwork.com",
+    "godpvqnszo.com",
+    "effectivecreativeformat.com",
+    "wyhifdpatl.com",
+    "rxeosevsso.com",
+    "stagepopkek.com",
+    "qgxbluhsgad.com",
+    "syntaxaboriginalsaxophone.com",
+    "addresseepaper.com",
+    "unseenreport.com",
 
     // Addon: Anti Revoke
     "ocsp.apple.com", 
@@ -76,8 +82,8 @@ function FindProxyForURL(url, host) {
     "*tracking*miui*",
     "*metrics*.data*",
     "*log*.hicloud*",
-    "*iadsdk*",
-    "*metrics*.samsung*"
+    "*metrics*.samsung*",
+    "*mopinion*",
   ];
 
   for (var i = 0; i < hosts.length; i++) {
